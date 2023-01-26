@@ -7,6 +7,7 @@ $(document).ready(function() {
     let averageTime = 0
     let difficultSumQuestion = ""
     let difficultSumTime = 0
+    let lastOperatorNumber = 5
 
 
 
@@ -100,20 +101,32 @@ $(document).ready(function() {
 
     function getQuestion() {
         let operatorNumber = getRandomNumber(2)
+        console.log("Operator Number " + operatorNumber)
+        console.log("Last Operator Number " + lastOperatorNumber)
+        while(operatorNumber == lastOperatorNumber) {
+            operatorNumber = getRandomNumber(2)
+        }
         let number1 = 0
         let number2 = 0
         let answer = 0
         let question = ""
+        lastOperatorNumber = operatorNumber
 
         if(operatorNumber == 0) {
             // Addition
-            number1 = getRandomNumber(10)
-            number2 = getRandomNumber(10)
+            number1 = getRandomNumber(30)
+            if(number1 == 0) {
+                number1 += 1
+            }
+            number2 = getRandomNumber(number1)
+            if(number2 == 0) {
+                number2 += 1
+            }
             answer = number1 + number2
             question = number1 + "+" + number2 + "="
         } else if(operatorNumber == 1) {
             // Subtraction
-            number1 = getRandomNumber(20)
+            number1 = getRandomNumber(30)
             number2 = getRandomNumber(number1)
             answer = number1 - number2
             question = number1 + "-" + number2 + "="
@@ -134,12 +147,12 @@ $(document).ready(function() {
         let questionText = question
 
         const diffTime = Math.abs(questionEndDate - questionStartDate)
-        console.log(diffTime + " Milliseconds")
+        
 
         if(diffTime > difficultSumTime) { // This updates the longest sum in the variables at the top
             difficultSumTime = diffTime
             difficultSumQuestion = questionText
-            console.log("New most difficult sum")
+            
         }
         timesTaken.push(diffTime) // Pushes the time taken into the array so that average time can be calculated later.
     }
@@ -149,9 +162,7 @@ $(document).ready(function() {
         for (let i = 0; i < timesTaken.length; i++) {
             totalTime += timesTaken[i]
         }
-        console.log("Total Time: " + totalTime)
         totalTime = (totalTime / 1000).toFixed(2)
-        console.log("Total Time: " + totalTime)
         return totalTime
     }
 
@@ -191,7 +202,7 @@ $(document).ready(function() {
     function gameOver() {
         let text = $("#text")
         let sums = $("#sums")
-        console.log("Game is over.")
+        // Placeholder
         getTotalTime()
         getAverageTime()
         setStorage()
@@ -290,12 +301,12 @@ $(document).ready(function() {
                     break
             }
             if(parseInt(input) == answer) {
-                console.log("Correct Answer")
+                // Placeholder
                 input = ""
                 answer = 999999
                 sumsCalculated++
                 sums.text(sumsCalculated + "/10")
-                console.log("Sums Calculated: " + sumsCalculated)
+                // Placeholder
                 calculateTime(startDate, questionText)
 
                 if(sumsCalculated == 10) {
@@ -324,7 +335,7 @@ $(document).ready(function() {
             // Finished
         })   
 
-        console.log("Answer: " + answer)
+        // Placeholder
         text.text(questionText)
         input(answer, questionText, true)
     }
@@ -420,7 +431,7 @@ $(document).ready(function() {
         $(this).css('cursor', 'pointer'); // 'default' to revert
         $(this).css('text-decoration-line', 'underline')
     }, function() {
-        console.log("Unhovered")
+        // Placeholder
         $(this).css('text-decoration-line', 'none')
     })
 
@@ -434,7 +445,7 @@ $(document).ready(function() {
         $(this).animate({"border-width":"2px"}, 100);
     })
     $("#fbBtn").click(function() {
-        console.log("Clicked Facebook Button")
+        // Placeholder
     })
 
     $("#liBtn").hover(function() {
@@ -447,7 +458,7 @@ $(document).ready(function() {
         $(this).animate({"border-width":"2px"}, 100);
     })
     $("#liBtn").click(function() {
-        console.log("Clicked LinkedIn Button")
+        // Placeholder
     })
 
     $("#twBtn").hover(function() {
@@ -460,6 +471,6 @@ $(document).ready(function() {
         $(this).animate({"border-width":"2px"}, 100);
     })
     $("#twBtn").click(function() {
-        console.log("Clicked Twitter Button")
+        // Placeholder
     })
 })
