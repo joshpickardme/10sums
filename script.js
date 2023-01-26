@@ -8,6 +8,9 @@ $(document).ready(function() {
     let difficultSumQuestion = ""
     let difficultSumTime = 0
 
+
+
+
     function setStorage() { // Only to be used after player has completed the game.
         let date = new Date()
         localStorage.setItem("date", date.toUTCString().slice(0,-13))
@@ -25,6 +28,14 @@ $(document).ready(function() {
             return false
         }
     }
+
+    document.getElementById("copyBtn").addEventListener('click', function() {
+        navigator.clipboard.writeText("I completed 10 sums in " + localStorage.getItem("totalTime") + " seconds on www.10sums.com")
+        $("#copyBtn").css('cursor', 'default')
+        $("#copyBtn").css('background-color', '#0A142F')
+        $("#copyBtn").css('color', 'white')
+        $("#copyBtn").text("Copied to clipboard")
+    })
 
     function getComputerTime() { // Gets the computer time, used for welcome message
         let date = new Date();

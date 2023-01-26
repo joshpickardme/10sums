@@ -9,6 +9,17 @@ body {
     padding: 0;
 }
 
+a:link { text-decoration: none; }
+
+
+a:visited { text-decoration: none; }
+
+
+a:hover { text-decoration: none; }
+
+
+a:active { text-decoration: none; }
+
 h1 {
     font-family: 'Poppins';
     color: white;
@@ -74,7 +85,7 @@ h1 {
   margin-left: 1rem;
   box-sizing: border-box;
   color: #0d172a;
-  cursor: pointer;
+  cursor:pointer;
   display: inline-block;
   font-family: "Basier circle",-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
   font-size: 1.1rem;
