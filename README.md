@@ -1,8 +1,6 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
 10sums was a practice project for me to consolidate all of my knowledge of Javascript into creating a small, simple and achievable math(s) game. In addition to this, I took the opportunity to learn jQuery as I knew it would be useful for this type of project.
 
 What you do:
