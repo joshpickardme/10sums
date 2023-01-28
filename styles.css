@@ -78,12 +78,13 @@ h1 {
     visibility: hidden;
     position: absolute;
     border: 0px;    
-    opacity: 0;
+    opacity: 1;
     background-color: transparent;
     border-radius: 16px;
     text-align: center;
     color: transparent;
     font-family: 'Poppins';
+    cursor: none;
 }
 
 /* Button */
