@@ -303,6 +303,7 @@ $(document).ready(function() {
             if(parseInt(input) == answer) {
                 // Placeholder
                 input = ""
+                document.getElementById("mobileInput").innerHTML = ""
                 answer = 999999
                 sumsCalculated++
                 sums.text(sumsCalculated + "/10")
