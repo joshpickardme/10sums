@@ -242,6 +242,7 @@ $(document).ready(function() {
         let answer = answerText
         let question = questionText
         let input = ""
+        setTimeout(function(){ $('.input'). focus (); }, 500);
 
         function addText(question, input) {
             if(sumsCalculated < 10) {
@@ -341,6 +342,7 @@ $(document).ready(function() {
 
     function displayWelcomeMessageTwo() {
         let text = $("#text")
+        setTimeout(function(){ $('.input'). focus (); }, 500);
         sleep(1000).then(() => { 
             text.text("Press any key to begin")
             fadeText(0);
