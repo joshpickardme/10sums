@@ -77,8 +77,6 @@ h1 {
 .input {
     visibility: hidden;
     border: 0px;
-    background-color: transparent;
-    border-color: transparent;
     border-radius: 16px;
     text-align: center;
     color: transparent;
