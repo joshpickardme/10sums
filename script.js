@@ -242,7 +242,6 @@ $(document).ready(function() {
         let answer = answerText
         let question = questionText
         let input = ""
-        $("#text").focus();
 
         function addText(question, input) {
             if(sumsCalculated < 10) {

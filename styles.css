@@ -75,6 +75,18 @@ h1 {
     visibility: hidden;
 }
 
+.input {
+    visibility: hidden;
+    background-color: transparent;
+    border: 3px, 3px;
+    border-color: #0A142F;
+    border-radius: 16px;
+    padding: 5px;
+    text-align: center;
+    color: white;
+    font-family: 'Poppins';
+}
+
 
 /* Button */
 .button-81 {
@@ -121,6 +133,9 @@ h1 {
     #text {
       font-size: 32px;
     }
+    .input {
+        visibility: visible;
+    }
   }
 
   @media (max-width: 766px) {
@@ -130,6 +145,7 @@ h1 {
     .button-81 {
         font-size: 1rem;
     }
+
   }
 
 
