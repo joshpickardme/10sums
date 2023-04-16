@@ -8,7 +8,7 @@ What you do:
 * The objective is to answer all 10 as quickly as possible.
 * At the end, you will receive (somewhat) detailed statistics of your performance. You're only allowed to play once a day (don't ask me why I did this).
 
-Of course, to most this would be a simple 10 minute project. There will no doubt be countless of ways I can and could improve this in addition to the terrible formatting that I am very aware of.
+
 
 
 
