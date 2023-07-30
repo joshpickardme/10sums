@@ -189,7 +189,7 @@ $(document).ready(function() {
        footer.css("visibility", "visible")
        arrow.css("visibility", "visible")
        global.css("overflow-y", "visible")
-       sums.text("10sums.com")
+       sums.text("10sums")
        text.html("You completed 10 sums in " + localStorage.totalTime + " seconds" + "<br>" + " It took you on average " + localStorage.averageTime +  " seconds per sum" + "<br>" +  " Your longest sum was " + localStorage.difficultSumQuestion + " with " + localStorage.difficultSumTime + " seconds")
        text.fadeTo("slow", 1)
        sums.fadeTo("slow",1)
@@ -215,7 +215,7 @@ $(document).ready(function() {
 
         /*
         sums.fadeTo("slow", 0, function() {
-            sums.text("10sums.com")
+            sums.text("10sums")
         })
         text.fadeTo("slow", 0, function() {
             text.html("You completed 10 sums in " + getTotalTime() + " seconds" + "<br>" + " It took you on average " + getAverageTime() +  " seconds per sum" + "<br>" +  " Your longest sum was " + difficultSumQuestion.slice(0, -1) + " with " + (difficultSumTime / 1000).toFixed(2) + " seconds")
