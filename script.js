@@ -31,7 +31,7 @@ $(document).ready(function() {
     }
 
     document.getElementById("copyBtn").addEventListener('click', function() {
-        navigator.clipboard.writeText("I completed 10 sums in " + localStorage.getItem("totalTime") + " seconds on www.10sums.com")
+        navigator.clipboard.writeText("I completed 10 sums in " + localStorage.getItem("totalTime") + " seconds on https://joshpickardme.github.io/10sums/")
         $("#copyBtn").css('cursor', 'default')
         $("#copyBtn").css('background-color', '#0A142F')
         $("#copyBtn").css('color', 'white')
